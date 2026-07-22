@@ -1,10 +1,22 @@
 from note import Note
+from manager import NotesManager
 
 print("Notes Manager Started")
 
-note = Note(
-    "First Note",
-    "Learning Git and Python step by step."
+manager = NotesManager()
+
+manager.add_note(
+    Note(
+        "First Note",
+        "Learning Git and Python step by step."
+    )
 )
 
-note.display()
+manager.add_note(
+    Note(
+        "Second Note",
+        "Practicing Git workflow."
+    )
+)
+
+manager.display_notes()
