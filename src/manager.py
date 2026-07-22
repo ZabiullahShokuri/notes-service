@@ -15,4 +15,12 @@ class NotesManager:
                 self.notes.remove(note)
                 return True
 
+
         return False
+
+    def find_note(self, title):
+        for note in self.notes:
+            if note.title == title:
+                return note
+
+        return None

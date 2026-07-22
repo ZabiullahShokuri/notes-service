@@ -27,3 +27,11 @@ print("After removing:")
 manager.display_notes()
 
 print("Removed:", removed)
+print("Searching note:")
+
+found_note = manager.find_note("Second Note")
+
+if found_note:
+    found_note.display()
+else:
+    print("Note not found")
