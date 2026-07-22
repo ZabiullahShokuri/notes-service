@@ -9,3 +9,10 @@ class NotesManager:
         for note in self.notes:
             note.display()
             print("-" * 30)
+    def remove_note(self, title):
+        for note in self.notes:
+            if note.title == title:
+                self.notes.remove(note)
+                return True
+
+        return False

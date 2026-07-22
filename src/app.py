@@ -18,5 +18,12 @@ manager.add_note(
         "Practicing Git workflow."
     )
 )
-
+print("Before removing:")
 manager.display_notes()
+
+removed = manager.remove_note("First Note")
+
+print("After removing:")
+manager.display_notes()
+
+print("Removed:", removed)
