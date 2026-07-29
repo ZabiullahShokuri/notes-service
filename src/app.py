@@ -27,6 +27,7 @@ print("After removing:")
 manager.display_notes()
 
 print("Removed:", removed)
+
 print("Searching note:")
 
 found_note = manager.find_note("Second Note")
@@ -35,3 +36,19 @@ if found_note:
     found_note.display()
 else:
     print("Note not found")
+
+
+print("-" * 30)
+print("Updating note:")
+
+updated = manager.update_note(
+    "Second Note",
+    "Learning Python OOP, Git and GitHub."
+)
+
+print("Updated:", updated)
+
+found_note = manager.find_note("Second Note")
+
+if found_note:
+    found_note.display()
